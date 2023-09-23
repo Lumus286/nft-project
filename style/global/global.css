@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a:hover {
+    color: var(--color-p1);
+}
+
+body {
+    background-color: var(--color-3);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 323px;
+    max-height: 667px;
+    margin: 62px auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: var(--color-2);
+    border-radius: 15px;
+    box-shadow: 0px 10px 10px #0d192b54;;
+}
+
+.nft-items {
+    max-width: 274px;
+    margin: 0 auto;
+}
+
+.nft-items a{
+    text-decoration: none;
+}
+
+.nft-items h1,
+.nft-items p {
+    margin-top: 15px;
+}
+
+.nft-image {
+    margin-top: 10px;
+    position: relative;
+}
+
+.nft-image img {
+    border-radius: 15px;
+}
+
+.nft-image:hover .overlay {
+    opacity: 0.7;
+}
+
+.overlay {
+    background: url(../../images/icon-view.svg) no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-p1); /* Cor desejada */
+    opacity: 0; /* Torna a camada transparente inicialmente */
+    transition: opacity 0.3s ease; /* Adiciona uma transição suave */
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+.nft-infos {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nft-infos p:first-child {
+    margin-left: 15px;
+}
+
+.nft-infos p:first-child::before {
+    content: url(../../images/icon-ethereum.svg);
+    position: absolute;
+    left: 0px;
+    top: 17px;
+}
+
+.nft-creator-info {
+    display: flex;
+    align-items: center;
+}
+
+.nft-avatar {
+    margin-top: 15px;
+    margin-right: 9px;
+    max-width: 33px;
+    max-height: 33px;
+}
+
+.nft-infos {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color-1);
+}
+
+.nft-infos p:last-child::before {
+    content: url(../../images/icon-clock.svg);
+    position: absolute;
+    top: 18px;
+    right: 75px;
+}
+
+@media (min-width:1440px) {
+    .container {
+        margin: 241px auto;
+    }
+}
